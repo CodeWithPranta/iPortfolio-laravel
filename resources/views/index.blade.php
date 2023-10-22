@@ -42,7 +42,19 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{$aboutInfo ? $aboutInfo->age : '27'}}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{$aboutInfo ? $aboutInfo->degree : 'MS in Computer Science'}}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{$aboutInfo ? $aboutInfo->email : 'codewithpranta@gmail.com'}}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>{{$aboutInfo ? $aboutInfo->freelance : 'Yes'}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
+                    <span>
+                        @if ($aboutInfo)
+                            @if ($aboutInfo->freelance === 1)
+                                Available
+                            @else
+                                Not interested
+                            @endif
+                        @else
+                            Available
+                        @endif
+                    </span>
+                </li>
                 </ul>
               </div>
             </div>
