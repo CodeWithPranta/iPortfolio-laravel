@@ -36,11 +36,7 @@
 
         @guest
             @if (Route::has('login'))
-              <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
-            @endif
-
-            @if (Route::has('register'))
-              <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Register</span></a></li>
+              <li><a href="{{route('login')}}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
             @endif
         @else
         <li class="nav-item dropdown">
