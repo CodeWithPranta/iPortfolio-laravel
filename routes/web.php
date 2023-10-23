@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomePageController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomePageController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomePageController::class, 'index'])->name('home');
 
 
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', [App\Http\Controllers\AuthUserController::class, 'index'])->name('home')->middleware('verified');

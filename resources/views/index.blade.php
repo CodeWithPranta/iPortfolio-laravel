@@ -1,10 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('content')
     <!-- ======= Hero Section ======= -->
   <section id="hero"  style="background: url('{{$generalInfo ? asset('storage/' . $generalInfo->background_image) : asset('assets/img/hero-bg.jpg')}}') top center;" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>Alex Smith</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+      <h1>{{$aboutInfo ? $aboutInfo->full_name : 'Pranta Mazumder'}}</h1>
+      @php
+         if ($aboutInfo) {
+            $dynamicTexts = json_decode($aboutInfo->dynamic_texts);
+         }
+      @endphp
+      <p>I'm <span class="typed" data-typed-items="
+        @if ($aboutInfo)
+         @foreach ($dynamicTexts as $dynamicText)
+           {{$dynamicText->profession . ','}}
+         @endforeach
+         @else
+         'Designer, Developer, Photographer, Engineer'
+        @endif
+        "></span></p>
     </div>
   </section><!-- End Hero -->
 

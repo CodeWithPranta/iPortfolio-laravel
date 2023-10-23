@@ -2,7 +2,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>CodeWithPranta</span></strong>
+        <span> &copy; Copyright 2023 </span>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

@@ -1103,3 +1103,8 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/* Own CSS */
+.logout-button:hover {
+    background-color: #343a40;
+}
