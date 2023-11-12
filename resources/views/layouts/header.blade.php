@@ -35,8 +35,8 @@
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
 
         @guest
-            @if (Route::has('login'))
-              <li><a href="{{route('login')}}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
+            @if (Route::has('filament.app.auth.login'))
+              <li><a href="{{route('filament.app.auth.login')}}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
             @endif
         @else
         <li class="nav-item dropdown">
@@ -46,13 +46,16 @@
             </a>
 
             <div class="dropdown-menu bg-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item logout-button" href="{{ route('logout') }}"
+                <a class="dropdown-item logout-button" href="{{ route('filament.app.pages.dashboard') }}">
+                 <i class="bx bxs-dashboard"></i>{{ __('Dashboard') }}
+                </a>
+                <a class="dropdown-item logout-button" href="{{ route('filament.app.auth.logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                     <i class="bx bx-log-out-circle"></i>{{ __('Logout') }}
                 </a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                <form id="logout-form" action="{{ route('filament.app.auth.logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
             </div>

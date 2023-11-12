@@ -20,8 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomePageController::class, 'index'])->name('home');
 
-
-
-Auth::routes(['verify' => true]);
-
 Route::get('/home', [App\Http\Controllers\AuthUserController::class, 'index'])->name('home')->middleware('verified');
