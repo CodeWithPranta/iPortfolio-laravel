@@ -39,6 +39,11 @@ class EditContactInfo extends Page
                 ])
                 ->schema([
                     Textarea::make('contact_short_description')->rows('3')->columnSpanFull()->required(),
+                    // For other two section
+                    Textarea::make('portfolio_short_description')->rows('3')->columnSpanFull()->required(),
+                    Textarea::make('service_short_description')->rows('3')->columnSpanFull()->required(),
+                    Textarea::make('testimonial_short_description')->rows('3')->columnSpanFull()->required(),
+
                     TextInput::make('email')->required()->email(),
                     TextInput::make('phone')->tel()->required(),
                     TextInput::make('address')->minLength(3)->maxLength(500)->required()->columnSpanFull(),
