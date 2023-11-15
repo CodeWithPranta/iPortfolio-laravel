@@ -9,6 +9,8 @@ use App\Models\GeneralInfo;
 use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
 use App\Models\Resume;
+use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -28,8 +30,11 @@ class HomePageController extends Controller
         $pCategories = PortfolioCategory::get();
 
         $portfolios = Portfolio::latest()->get();
-
         //dd($portfolios);
+
+        $services = Service::get();
+
+        $testimonials = Testimonial::get();
 
         return view('index', [
             'generalInfo' => $generalInfo,
@@ -39,6 +44,8 @@ class HomePageController extends Controller
             'contactInfo' => $contactInfo,
             'pCategories' => $pCategories,
             'portfolios' => $portfolios,
+            'services' => $services,
+            'testimonials' => $testimonials,
         ]);
     }
 }
