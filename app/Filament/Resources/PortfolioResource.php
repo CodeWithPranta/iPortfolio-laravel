@@ -25,6 +25,7 @@ class PortfolioResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('featured_image')
+                    ->label('Featured image (800*600px)')
                     ->image()
                     ->imageEditor()
                     ->imageEditorAspectRatios([
@@ -34,6 +35,7 @@ class PortfolioResource extends Resource
                     ])
                     ->required(),
                 Forms\Components\FileUpload::make('slider_photos')
+                    ->label('Slider images (1288*600px)')
                     ->image()
                     ->imageEditor()
                     ->imageEditorAspectRatios([

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Fact;
 use App\Models\Skill;
 use App\Models\GeneralInfo;
 use App\Models\Portfolio;
@@ -36,6 +37,8 @@ class HomePageController extends Controller
 
         $testimonials = Testimonial::get();
 
+        $fact = Fact::first();
+
         return view('index', [
             'generalInfo' => $generalInfo,
             'aboutInfo' => $aboutInfo,
@@ -46,6 +49,7 @@ class HomePageController extends Controller
             'portfolios' => $portfolios,
             'services' => $services,
             'testimonials' => $testimonials,
+            'fact' => $fact,
         ]);
     }
 }

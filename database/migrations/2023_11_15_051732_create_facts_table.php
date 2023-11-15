@@ -14,10 +14,7 @@ return new class extends Migration
         Schema::create('facts', function (Blueprint $table) {
             $table->id();
             $table->text('fact_short_description');
-            $table->string('first_info_title');
-            $table->string('second_info_title');
-            $table->string('third_info_title');
-            $table->string('fourth_info_title');
+            $table->json('infos');
             $table->timestamps();
         });
     }

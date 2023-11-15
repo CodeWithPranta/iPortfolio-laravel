@@ -33,35 +33,6 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-
-        @guest
-            @if (Route::has('filament.app.auth.login'))
-              <li><a href="{{route('filament.app.auth.login')}}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
-            @endif
-        @else
-        <li class="nav-item dropdown">
-            <a href="#" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                <i class="bx bx-user-circle"></i>
-                <span>{{Auth::user()->name}}</span>
-            </a>
-
-            <div class="dropdown-menu bg-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item logout-button" href="{{ route('filament.app.pages.dashboard') }}">
-                 <i class="bx bxs-dashboard"></i>{{ __('Dashboard') }}
-                </a>
-                <a class="dropdown-item logout-button" href="{{ route('filament.app.auth.logout') }}"
-                   onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                    <i class="bx bx-log-out-circle"></i>{{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('filament.app.auth.logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
-        </li>
-        @endguest
-
       </ul>
     </nav><!-- .nav-menu -->
   </div>

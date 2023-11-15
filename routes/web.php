@@ -23,3 +23,5 @@ Route::get('/', [App\Http\Controllers\HomePageController::class, 'index'])->name
 Route::get('/home', [App\Http\Controllers\AuthUserController::class, 'index'])->name('home')->middleware('verified');
 
 Route::post('/send-message', [App\Http\Controllers\ContactController::class, 'sendMessage'])->name('send.message');
+
+Route::get('/portfolio/{id}', [App\Http\Controllers\PortfolioController::class, 'singleRecord'])->name('portfolio.details');
