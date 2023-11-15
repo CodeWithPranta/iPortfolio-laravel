@@ -11,8 +11,9 @@
 ![Screenshot 2023-11-16 021327](https://github.com/CodeWithPranta/iPortfolio-laravel/assets/101281745/eebe432e-b04b-47f1-9df4-d0df61865007)
 
 # Check Demo 
-https://codewithpranta.com 
-Backend Demo: https://school.communitymars.com/admin   [Login Details: codewithpranta@gmail.com/12345678]
+  Front-end demo:  https://codewithpranta.com 
+  Backend Demo: https://school.communitymars.com/admin   
+  [Login Details: codewithpranta@gmail.com/12345678]
 
 ## Contributing
 
