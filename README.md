@@ -4,6 +4,9 @@
 
 ![Screenshot 2023-11-16 020605](https://github.com/CodeWithPranta/iPortfolio-laravel/assets/101281745/19098c83-e201-4373-a6b4-fc5f4279e04d)
 
+# Dark mode and Dyanmic Form Fields
+![Screenshot 2023-11-16 020840](https://github.com/CodeWithPranta/iPortfolio-laravel/assets/101281745/f24fb7ec-5e70-47c7-9c13-78e68bf0a70c)
+
 
 ## About Laravel
 
