@@ -1,5 +1,7 @@
 <h2 align="center">iPortfolio - Bootstrap Portfolio Websites Template</h2>
 
+<p>It's easy to make a static portfolio website but if you want to add, create, update, delete and track your portfolio, service then laravel can make it outstanding.</p>
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
