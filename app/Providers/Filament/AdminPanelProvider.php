@@ -40,8 +40,18 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                //Widgets\AccountWidget::class,
+                //Widgets\FilamentInfoWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\PageViewsWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\VisitorsWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\ActiveUsersOneDayWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\ActiveUsersSevenDayWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\SessionsWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\SessionsDurationWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\SessionsByCountryWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\SessionsByDeviceWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\MostVisitedPagesWidget::class,
+                \BezhanSalleh\FilamentGoogleAnalytics\Widgets\TopReferrersListWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -55,6 +65,10 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->sidebarCollapsibleOnDesktop()
+            ->renderHook(
+                'panels::head.start',
+                fn () => view('analyticsTag'),
+            )
             ->authMiddleware([
                 Authenticate::class,
             ]);
