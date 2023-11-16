@@ -27,3 +27,6 @@ Route::post('/send-message', [App\Http\Controllers\ContactController::class, 'se
 Route::get('/portfolio/{id}', [App\Http\Controllers\PortfolioController::class, 'singleRecord'])->name('portfolio.details');
 
 Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'index'])->name('articles');
+
+// Route::get('/articles/{id}', [App\Http\Controllers\ArticleController::class, 'singleArticle'])->name('single.article');
+Route::get('/articles/{slug}', [App\Http\Controllers\ArticleController::class, 'singleArticle'])->name('single.article');

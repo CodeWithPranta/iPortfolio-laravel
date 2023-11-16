@@ -60,10 +60,12 @@ class ArticleResource extends Resource
                     ->schema([
                         Forms\Components\Textarea::make('meta_description')
                             ->maxLength(65535)
-                            ->columnSpanFull(),
+                            ->columnSpanFull()
+                            ->required(),
                         Forms\Components\Textarea::make('keywords')
                             ->maxLength(65535)
-                            ->columnSpanFull(),
+                            ->columnSpanFull()
+                            ->required(),
                             ])
                 ]);
     }

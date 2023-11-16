@@ -47,6 +47,7 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="{{route('articles')}}" class="nav-link scrollto"><i class="bx bx-news"></i> <span>Articles</span></a></li>
       </ul>
       @else
       <ul>
@@ -56,6 +57,7 @@
         <li><a href="/#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="/#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="/#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="{{route('articles')}}" class="nav-link scrollto"><i class="bx bx-news"></i> <span>Articles</span></a></li>
       </ul>
       @endif
     </nav><!-- .nav-menu -->
