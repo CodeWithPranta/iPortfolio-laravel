@@ -16,6 +16,8 @@ class GeneralInfo extends Model
         'meta_description',
         'keywords',
         'social_links',
+        'favicon',
+        'apple_touch_icon',
     ];
 
     protected $casts = [

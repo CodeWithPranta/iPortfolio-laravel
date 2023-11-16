@@ -57,7 +57,7 @@ class EditGeneralInfo extends Page implements HasForms
                         ->imageEditorAspectRatios([
                             '1:1',
                         ])
-                    ->required(),
+                        ->required(),
                     FileUpload::make('background_image')
                         ->label('Background image (1920 by 1280)px')
                         ->image()
@@ -65,6 +65,22 @@ class EditGeneralInfo extends Page implements HasForms
                         ->imageEditorAspectRatios([
                             '16:9',
                             '4:3',
+                            '1:1',
+                        ])
+                        ->required(),
+                    FileUpload::make('favicon')
+                        ->label('Favicon PNG (32 by 32)px')
+                        ->image()
+                        ->imageEditor()
+                        ->imageEditorAspectRatios([
+                            '1:1',
+                        ])
+                        ->required(),
+                    FileUpload::make('apple_touch_icon')
+                        ->label('Apple Touch PNG (180 by 180)px')
+                        ->image()
+                        ->imageEditor()
+                        ->imageEditorAspectRatios([
                             '1:1',
                         ])
                         ->required(),
