@@ -7,7 +7,17 @@
 
     <div class="profile">
       <img src="{{$generalInfo ? asset('storage/'. $generalInfo->avatar) : asset('assets/img/profile-img.jpg')}}" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+      <h1 class="text-light">
+        <a href="/">
+            @php
+                $line = $aboutInfo->full_name;
+                $firstWord = strtok($line, ' ');
+            @endphp
+
+           {{$firstWord}}
+
+        </a>
+      </h1>
       @php
          if ($generalInfo)
          {
