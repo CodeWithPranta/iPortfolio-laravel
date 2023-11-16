@@ -38,7 +38,8 @@ class ArticleResource extends Resource
                         '4:3',
                         '1:1',
                     ])
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->required(),
                 Forms\Components\TextInput::make('title')
                     ->placeholder('e.g. The reason behind laravel popularity among developers')
                     ->unique(ignoreRecord:true)
