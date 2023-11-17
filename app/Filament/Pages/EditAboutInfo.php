@@ -90,7 +90,8 @@ class EditAboutInfo extends Page implements HasForms
                 Radio::make('freelance')
                   ->required()
                   ->boolean(),
-                Repeater::make('dynamic_texts')
+            ]),
+            Repeater::make('dynamic_texts')
                   ->label('Dynamic texts in hero section')
                   ->schema([
                       TextInput::make('profession')
@@ -101,8 +102,6 @@ class EditAboutInfo extends Page implements HasForms
                   ->maxItems(6)
                   ->required()
                   ->columnSpan(2),
-
-            ]),
 
             Textarea::make('about_yourself')
                 ->rows(7)
