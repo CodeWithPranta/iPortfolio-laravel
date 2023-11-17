@@ -29,7 +29,7 @@
       <div class="social-links mt-3 text-center">
         @if ($generalInfo)
             @foreach ($socialLinks as $socialLink)
-            <a href="{{$socialLink->url}}" class="{{$socialLink->name}}"><i class="bx bxl-{{$socialLink->name}}"></i></a>
+            <a href="{{$socialLink->url}}" class="{{$socialLink->name}}" target="_blank"><i class="bx bxl-{{$socialLink->name}}"></i></a>
             @endforeach
         @endif
       </div>

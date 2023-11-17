@@ -50,7 +50,7 @@
                 <li><strong>Category</strong>: {{$portfolio->category}}</li>
                 <li><strong>Client</strong>: {{$portfolio->client}}</li>
                 <li><strong>Project date</strong>: {{$portfolio->project_date}}</li>
-                <li><strong>Project URL</strong>: <a href="{{$portfolio->project_link}}">{{$portfolio->project_link}}</a></li>
+                <li><strong>Project URL</strong>: <a href="{{$portfolio->project_link}}" target="_blank">{{$portfolio->project_link}}</a></li>
               </ul>
             </div>
           </div>
