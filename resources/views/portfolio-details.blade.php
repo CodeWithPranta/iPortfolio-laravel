@@ -53,14 +53,13 @@
                 <li><strong>Project URL</strong>: <a href="{{$portfolio->project_link}}">{{$portfolio->project_link}}</a></li>
               </ul>
             </div>
-            <div class="portfolio-description">
-              <h2>Project Overview</h2>
-              <p>
-                {!! $portfolio->project_details !!}
-              </p>
+          </div>
+          <div class="portfolio-description">
+            <h2>Project Overview</h2>
+            <div>
+              {!! $portfolio->project_details !!}
             </div>
           </div>
-
         </div>
 
       </div>
