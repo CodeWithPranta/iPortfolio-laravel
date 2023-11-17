@@ -9,7 +9,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Portfolio Details</h2>
           <ol>
-            <li><a href="/">Home</a></li>
+            <li><a href="/" wire:navigate.hover>Home</a></li>
             <li>Portfolio Details</li>
           </ol>
         </div>

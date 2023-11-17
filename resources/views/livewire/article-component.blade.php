@@ -39,7 +39,7 @@
                     <h3 class="mb-0">{{Str::limit($article->title, 35)}}</h3>
                     <div class="mb-1 text-muted">{{\Carbon\Carbon::parse($article->created_at)->format('j F, Y') }}</div>
                     <div class="card-text mb-auto">{!! Str::limit($article->content, 120) !!}</div>
-                    <a href="{{ route('single.article', ['slug' => $article->slug]) }}" class="stretched-link">Continue reading</a>
+                    <a href="{{ route('single.article', ['slug' => $article->slug]) }}" wire:navigate.hover class="stretched-link">Continue reading</a>
                   </div>
                 </div>
               </div>

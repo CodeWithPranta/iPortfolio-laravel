@@ -8,7 +8,7 @@
     <div class="profile">
       <img src="{{$generalInfo ? asset('storage/'. $generalInfo->avatar) : asset('assets/img/profile-img.jpg')}}" alt="" class="img-fluid rounded-circle">
       <h1 class="text-light">
-        <a href="/">
+        <a href="/" wire:navigate.hover>
             @php
                 $line = $aboutInfo->full_name;
                 $firstWord = strtok($line, ' ');
@@ -47,7 +47,7 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        <li><a href="{{route('articles')}}" class="nav-link scrollto"><i class="bx bx-news"></i> <span>Articles</span></a></li>
+        <li><a href="{{route('articles')}}" wire:navigate.hover class="nav-link scrollto"><i class="bx bx-news"></i> <span>Articles</span></a></li>
       </ul>
       @else
       <ul>
@@ -57,7 +57,7 @@
         <li><a href="/#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="/#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="/#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        <li><a href="{{route('articles')}}" class="nav-link scrollto"><i class="bx bx-news"></i> <span>Articles</span></a></li>
+        <li><a href="{{route('articles')}}" wire:navigate.hover class="nav-link scrollto"><i class="bx bx-news"></i> <span>Articles</span></a></li>
       </ul>
       @endif
     </nav><!-- .nav-menu -->

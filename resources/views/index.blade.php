@@ -250,7 +250,7 @@
                       <img src="{{asset('storage/'. $portfolio->featured_image)}}" class="img-fluid" alt="Image">
                       <div class="portfolio-links">
                         <a href="{{asset('storage/'. $portfolio->featured_image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Project"><i class="bx bx-plus"></i></a>
-                        <a href="{{route('portfolio.details', $portfolio->id)}}" title="More Details"><i class="bx bx-link"></i></a>
+                        <a href="{{route('portfolio.details', $portfolio->id)}}" wire:navigate.hover title="More Details"><i class="bx bx-link"></i></a>
                       </div>
                     </div>
                 </div>
