@@ -35,16 +35,6 @@
 
             </div>
 
-            {{-- <div class="col-lg-4">
-              <div class="portfolio-info">
-                <h3>Article information</h3>
-                <ul>
-                  <li><strong>Category</strong>: {{$article->category->name}}</li>
-                  <li><strong>Publish date</strong>: {{\Carbon\Carbon::parse($article->created_at)->format('j F, Y')}}</li>
-                </ul>
-              </div>
-            </div> --}}
-
           </div>
 
           <div class="row gy-4">
