@@ -206,7 +206,7 @@
             @foreach ($experiences as $exp)
               <div class="resume-item">
                 <h4>{{$exp->title}}</h4>
-                <h5>{{$exp->start_date}} to {{$edu->end_date === null ? 'Present' : $edu->end_date}}</h5>
+                <h5>{{$exp->start_date}} to {{$exp->end_date === null ? 'Present' : $exp->end_date}}</h5>
                 <p><em>{{$exp->industry_name}} </em></p>
                 <div>
                   {!! $exp->content !!}
