@@ -47,7 +47,7 @@
           </div>
 
         </div>
-      </section><
+      </section>
 
 
   </main><!-- End #main -->
