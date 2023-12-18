@@ -17,7 +17,7 @@ class ArticleComponent extends Component
     {
         if (!$this->search)
         {
-            $this->articles = Article::latest();
+            $this->articles = Article::latest()->get();
         }else
         {
             $this->articles = Article::where('title', 'like', '%' . $this->search . '%')
